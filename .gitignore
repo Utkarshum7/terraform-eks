@@ -1,0 +1,41 @@
+# Terraform
+.terraform/
+**/.terraform/*
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+terraform.tfstate.d/
+**/terraform.tfstate.d/
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+plan.out
+plan.txt
+
+# Keys (keep public keys tracked)
+terraform_for_devops/terraform-key-ec2
+*.pem
+*.key
+!*.pub
+
+# IDE/Editor
+.vscode/
+.idea/
+*.iml
+*.code-workspace
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+
