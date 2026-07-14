@@ -1,8 +1,8 @@
-EKS Cluster Setup with Terraform
+# EKS Cluster Setup with Terraform
 
 This repository contains the Infrastructure as Code (IaC) for deploying an Amazon Elastic Kubernetes Service (EKS) cluster using Terraform. The project leverages Terraform modules to provision a scalable and production-ready Kubernetes cluster on AWS, while ensuring state management and locking with Amazon S3 and DynamoDB.
 
-🚀 Features
+## 🚀 Features
 
 Automated provisioning of EKS cluster and associated resources.
 
@@ -16,7 +16,7 @@ Creates VPC, subnets, security groups, IAM roles, and EKS cluster.
 
 Supports node group configuration and autoscaling.
 
-📂 Project Structure
+## 📂 Project Structure
 terraform-eks/
 │── main.tf              # Root Terraform configuration  
 │── variables.tf         # Input variables for customization  
@@ -27,7 +27,7 @@ terraform-eks/
 │── s3_backend.tf        # Remote backend (S3 + DynamoDB) configuration  
 │── terraform.tfvars     # Variable values (not committed for security)  
 
-⚙️ Prerequisites
+## ⚙️ Prerequisites
 
 AWS account with IAM permissions to create EKS resources.
 
@@ -70,7 +70,7 @@ terraform apply -auto-approve
 6. Destroy resources (when no longer needed)
 terraform destroy -auto-approve
 
-📌 Remote State Management
+## 📌 Remote State Management
 
 S3 bucket stores Terraform state (terraform.tfstate).
 
@@ -78,7 +78,7 @@ DynamoDB table prevents multiple users from applying changes simultaneously (sta
 
 Ensures safe collaboration in team environments.
 
-🔑 Outputs
+## 🔑 Outputs
 
 After a successful apply, Terraform will output:
 
@@ -92,7 +92,7 @@ These can be used to connect via kubectl:
 
 aws eks update-kubeconfig --region <region> --name <cluster_name>
 
-🛠️ Future Enhancements
+## 🛠️ Future Enhancements
 
 Add RDS integration for persistent databases.
 
